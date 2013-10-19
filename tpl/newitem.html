@@ -1,0 +1,36 @@
+<div data-theme="a" data-role="header">
+    <a href="#home" data-role="button" class="bb10" data-icon="arrow-l" data-iconpos="notext" data-direction="reverse"
+        data-rel="back">Back</a>
+    <h3>New Item
+    </h3>
+</div>
+<div data-role="content">
+    <div data-role="fieldcontain">
+        <label for="txtTitle">
+            Title
+        </label>
+        <input id="txtTitle" value="<%=title %>" type="text" maxlength="60" />
+        <input id="hidId" value="<%=objectId%>" type="hidden" />
+    </div>
+
+    <div data-role="fieldcontain">
+        <label for="txtPrice">
+            Price
+        </label>
+        <input id="txtPrice" type="text" maxlength="30" /> 
+    </div>
+    <div data-role="fieldcontain">
+        <label for="txtShipPrice">
+            Shipping
+        </label>
+        <input id="txtShipPrice" type="text" maxlength="30" />
+    </div>
+    <div data-role="fieldcontain">
+        <label for="txtDesc">
+            Description
+        </label>
+        <textarea id="txtDesc"><%=description%></textarea>
+    </div>
+    <input data-inline="true" data-icon="check" data-iconpos="left" value="Save" id="btnSave" data-mini="true"
+        data-theme="b" type="submit">
+</div>

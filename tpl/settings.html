@@ -1,0 +1,80 @@
+<div data-role="header">
+    <h3>Settings
+    </h3>
+</div>
+<div data-role="content">
+
+    <div data-role="collapsible-set" id="divContainer">
+
+        <div data-role="collapsible" data-theme="b" data-iconpos="right" aria-expanded="true">
+            <h3>
+                <span>My Info</span>
+            </h3>
+            <p>
+                <div data-role="fieldcontain">
+                    <label for="txtFirstName">
+                        First Name
+                    </label>
+                    <input id="txtFirstName" placeholder="Enter your first name" value="" type="text" />
+                </div>
+                <div data-role="fieldcontain">
+                    <label for="txtLastName">
+                        Last Name
+                    </label>
+                    <input id="txtLastName" placeholder="Enter your last name" value="" type="text" />
+                </div>
+
+            </p>
+        </div>
+
+        <div data-role="collapsible" data-theme="b" data-iconpos="right" aria-expanded="true">
+            <h3>
+                <span>Shipping Address</span>
+            </h3>
+            <p>
+
+                <div data-role="fieldcontain">
+                    <label for="txtShipAddress">
+                        Address
+                    </label>
+                    <input id="txtShipAddress" placeholder="Enter your shipping address" value="" type="text" />
+                </div>
+
+            </p>
+        </div>
+
+        <div data-role="collapsible" data-theme="b" data-iconpos="right" aria-expanded="true">
+            <h3>
+                <span>Billing Address</span>
+            </h3>
+            <p>
+                <div data-role="fieldcontain">
+                    <label for="txtBillingAddress">
+                        Address
+                    </label>
+                    <input id="txtBillingAddress" placeholder="Enter your shipping address" value="" type="text" />
+                </div>
+
+            </p>
+        </div>
+
+        <div data-role="collapsible" data-theme="b" data-iconpos="right" aria-expanded="true">
+            <h3>
+                <span>Preferences</span>
+            </h3>
+            <p>
+                <fieldset data-role="controlgroup">
+                    <legend></legend>
+                    <input type="checkbox" name="chkPre" id="chkPre" class="custom" />
+                    <label for="chkPre">My preferences</label>
+                </fieldset>
+
+            </p>
+        </div>
+
+    </div>
+
+    <a data-role="button" data-inline="true" data-direction="reverse" data-mini="true" id="btnSave" data-theme="b"
+        data-icon="check" data-iconpos="left" id="btnSave">Save</a>
+
+</div>

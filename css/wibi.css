@@ -1,0 +1,18 @@
+#container li {
+background-image: url("wibi.png");
+    background-repeat: no-repeat;   
+    list-style: none outside none;
+}	
+.ui-icon-app-new{background-position:0px 0px ; width: 32px ; height: 32px; }
+.ui-icon-app-profile{background-position:-42px 0px ; width: 32px ; height: 32px; }
+.ui-icon-app-save{background-position:-84px 0px ; width: 32px ; height: 32px; }
+.ui-icon-app-logout{background-position:-126px 0px ; width: 32px ; height: 32px; }
+.ui-icon-app-login{background-position:-168px 0px ; width: 32px ; height: 32px; }
+.ui-icon-app-settings{background-position:-210px 0px ; width: 32px ; height: 32px; }
+.ui-icon-app-preference{background-position:-252px 0px ; width: 32px ; height: 32px; }
+.ui-icon-app-edit{background-position:-294px 0px ; width: 32px ; height: 32px; }
+.ui-icon-app-detail{background-position:-336px 0px ; width: 32px ; height: 32px; }
+.ui-icon-app-buy{background-position:-378px 0px ; width: 32px ; height: 32px; }
+.ui-icon-app-qrcode{background-position:-420px 0px ; width: 32px ; height: 32px; }
+.ui-icon-app-payment{background-position:-462px 0px ; width: 32px ; height: 32px; }
+.ui-icon-app-sell{background-position:-504px 0px ; width: 32px ; height: 32px; }
