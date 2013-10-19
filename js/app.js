@@ -7,7 +7,7 @@ var app = {
         document.removeEventListener('deviceready', this.onDeviceReady, false);
     },
     onDeviceReady: function (remote) {
-        tpl.loadTemplates(['home', 'footer', 'login', 'register',
+        tpl.loadTemplates(['home', 'footer', 'login', 'register', 'qrcode', 'buyitem',
             'newitem', 'my-items-item', 'my-items-page', 'detail', 'settings', ], function () {
                 AppRouter = new AppRouter(); Backbone.history.start();
             });
@@ -27,6 +27,8 @@ var AppRouter = Backbone.Router.extend({
         "newitem": "newitem",
         "login": "login",
         "logout": "logout",
+        "buyitem/:id": "buyitem",
+        "qrcode/:id": "qrcode",
         "detail/:id": "detail"
     },
     loggedIn: function () {
@@ -81,11 +83,37 @@ var AppRouter = Backbone.Router.extend({
             model: m
         }));
     },
+    buyitem: function (id) {
+        var query = new Parse.Query(ItemModel);
+        query.get(id, {
+            success: function (obj) {
+                AppRouter.changePage(new BuyItemView({
+                    model: obj
+                }));
+            },
+            error: function (object, error) {
+                AppDlg.ShowError("<p class='error'>" + error.message + "</p>");
+            }
+        });
+    },
+    qrcode: function (id) {
+        var query = new Parse.Query(ItemModel);
+        query.get(id, {
+            success: function (obj) {
+                AppRouter.changePage(new QRCodeView({
+                    model: obj
+                }));
+            },
+            error: function (object, error) {
+                AppDlg.ShowError("<p class='error'>" + error.message + "</p>");
+            }
+        });
+    },
     detail: function (id) {
         var query = new Parse.Query(ItemModel);
         query.get(id, {
             success: function (obj) {
-                AppRouter.changePage(new EventDetailView({
+                AppRouter.changePage(new ItemDetailView({
                     model: obj
                 }));
             },

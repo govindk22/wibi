@@ -21,7 +21,8 @@ var ItemNewView = Backbone.View.extend({
         var id =    $("#hidId").val() || null;
         var item = {
             title: $('#txtTitle').val(),
-            description: $("#txtDesc").val()
+            description: $("#txtDesc").val(),
+            price : $("#txtPrice").val(),
         };
         return item;
     },

@@ -1,20 +1,17 @@
 <div data-theme="a" data-role="header">
     <a href="#mylist" data-role="button" class="bb10" data-icon="arrow-l" data-iconpos="notext" data-direction="reverse"
         data-rel="back">Back</a>
-    <h3>Product Details
+    <h3>Buy Now
     </h3>
 </div>
 <div data-role="content">
+    <input id="hidId" value="<%=objectId%>" type="hidden" />
     <span style="color: green"><%=title %> </span>
     <br />
     <small>My item details</small>
     <br />
 
-    <input id="hidId" value="<%=objectId%>" type="hidden" />
-    <br />
-    <br />
+    <div id="qrcode"></div>
 
-    <a class="ui-icon-app-qrcode" href="#qrcode/<%=objectId%>"></a>
-
-    <a class="ui-icon-app-buy" href="#buyitem/<%=objectId%>"></a>
+    <span>Scan this to buy</span>
 </div>

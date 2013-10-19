@@ -1,7 +1,7 @@
 <div data-theme="a" data-role="header">
     <a href="#mylist" data-role="button" class="bb10" data-icon="arrow-l" data-iconpos="notext" data-direction="reverse"
         data-rel="back">Back</a>
-    <h3>Product Details
+    <h3>Buy
     </h3>
 </div>
 <div data-role="content">
@@ -12,9 +12,16 @@
 
     <input id="hidId" value="<%=objectId%>" type="hidden" />
     <br />
-    <br />
 
-    <a class="ui-icon-app-qrcode" href="#qrcode/<%=objectId%>"></a>
+    <form action="" method="POST">
+        <script
+            src="https://checkout.stripe.com/v2/checkout.js" class="stripe-button"
+            data-key="pk_test_v1lHFSy7t6IjCysl06mowe2v "
+            data-amount="<%=price%>"
+            data-name="Wibi  App"
+            data-description="<%=title %> $<%=price%>"
+            data-image="/css/payicon.png">
+        </script>
+    </form>
 
-    <a class="ui-icon-app-buy" href="#buyitem/<%=objectId%>"></a>
 </div>
